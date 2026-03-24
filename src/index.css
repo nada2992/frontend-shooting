@@ -1,6 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "tailwindcss/tailwind.css";
-
+@custom-variant dark (&:where(.dark, .dark *));
 body {
   font-family: "Inter", sans-serif;
 }
@@ -14,12 +15,7 @@ body {
   border-bottom: 2px solid green;
 }
 body {
-  background-color: white;
-  color: #1f2937;
-}
-.dark body {
-  background-color: black;
-  color: #fff2e1;
+  @apply bg-white dark:bg-black text-gray-900 dark:text-[#fff2e1];
 }
 .logo {
   height: 40px;
